@@ -81,13 +81,22 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href="#waitlist"
+          href="https://github.com/ashwanth1109/CodeBench/releases/latest"
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn-glow relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-cyan px-5 py-2 text-sm font-medium text-background transition-all hover:brightness-110"
         >
-          Join Waitlist
+          Download
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path
-              d="M3 7H11M11 7L7.5 3.5M11 7L7.5 10.5"
+              d="M7 2.5V9.5M7 9.5L4 6.5M7 9.5L10 6.5"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M2.5 10.5V11.5C2.5 11.7761 2.72386 12 3 12H11C11.2761 12 11.5 11.7761 11.5 11.5V10.5"
               stroke="currentColor"
               strokeWidth="1.5"
               strokeLinecap="round"

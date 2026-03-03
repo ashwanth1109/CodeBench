@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 function MockCanvasUI() {
   return (
@@ -260,17 +259,10 @@ function SessionCard({
   );
 }
 
+const DOWNLOAD_URL =
+  "https://github.com/ashwanth1109/CodeBench/releases/latest";
+
 export default function Hero() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubmitted(true);
-    }
-  };
-
   return (
     <section className="relative min-h-screen pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden">
       {/* Background effects */}
@@ -288,10 +280,10 @@ export default function Hero() {
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-border px-4 py-1.5 text-xs text-text-secondary bg-surface-light/30">
             <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-yellow-400" />
             </span>
-            Early access opening soon
+            Alpha — Experimental
           </div>
         </motion.div>
 
@@ -319,59 +311,41 @@ export default function Hero() {
           development — all in one workbench.
         </motion.p>
 
-        {/* Waitlist form */}
+        {/* Download CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-10 flex justify-center"
+          className="mt-10 flex flex-col items-center gap-4"
         >
-          {submitted ? (
-            <div className="flex items-center gap-2 text-green-400 text-sm">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <path
-                  d="M4.5 9.5L7.5 12.5L13.5 6"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              You&apos;re on the list. We&apos;ll be in touch.
-            </div>
-          ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="flex flex-col sm:flex-row items-center gap-3 w-full max-w-md"
-            >
-              <div className="relative flex-1 w-full">
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@company.com"
-                  className="w-full rounded-full bg-surface-light border border-border px-5 py-3 text-sm text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/30 transition-all"
-                />
-              </div>
-              <button
-                type="submit"
-                className="btn-glow shrink-0 rounded-full bg-gradient-to-r from-accent to-accent-cyan px-6 py-3 text-sm font-medium text-background transition-all hover:brightness-110 w-full sm:w-auto"
-              >
-                Join Waitlist
-              </button>
-            </form>
-          )}
+          <a
+            href={DOWNLOAD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-glow inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-accent to-accent-cyan px-8 py-3.5 text-sm font-medium text-background transition-all hover:brightness-110"
+          >
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path
+                d="M9 3V12M9 12L5.5 8.5M9 12L12.5 8.5"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M3 13.5V14.5C3 15.0523 3.44772 15.5 4 15.5H14C14.5523 15.5 15 15.0523 15 14.5V13.5"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            Download for macOS
+          </a>
+          <p className="text-xs text-text-tertiary">
+            Alpha release — things may break between versions. macOS only for now.
+          </p>
         </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-4 text-center text-xs text-text-tertiary"
-        >
-          No spam. Early access for the first 500 signups.
-        </motion.p>
 
         {/* Mock UI */}
         <motion.div
