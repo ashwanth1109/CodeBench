@@ -7,7 +7,7 @@ function MockCanvasUI() {
   return (
     <div className="relative w-full max-w-4xl mx-auto mt-16 md:mt-20">
       {/* Glow behind */}
-      <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-accent/20 via-accent-purple/20 to-accent-cyan/10 blur-3xl opacity-50" />
+      <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-accent/20 via-accent-cyan/20 to-accent-cyan/10 blur-3xl opacity-50" />
 
       {/* Main window frame */}
       <div className="relative rounded-xl border border-border overflow-hidden bg-surface shadow-2xl">
@@ -180,7 +180,7 @@ function MockCanvasUI() {
                 y1="25%"
                 x2="70%"
                 y2="25%"
-                stroke="rgba(59,130,246,0.15)"
+                stroke="rgba(247,118,142,0.15)"
                 strokeWidth="1"
                 strokeDasharray="4 4"
               />
@@ -189,7 +189,7 @@ function MockCanvasUI() {
                 y1="25%"
                 x2="25%"
                 y2="70%"
-                stroke="rgba(139,92,246,0.15)"
+                stroke="rgba(255,158,100,0.15)"
                 strokeWidth="1"
                 strokeDasharray="4 4"
               />
@@ -198,7 +198,7 @@ function MockCanvasUI() {
                 y1="25%"
                 x2="75%"
                 y2="70%"
-                stroke="rgba(6,182,212,0.15)"
+                stroke="rgba(247,118,142,0.10)"
                 strokeWidth="1"
                 strokeDasharray="4 4"
               />
@@ -276,7 +276,7 @@ export default function Hero() {
       {/* Background effects */}
       <div className="absolute inset-0 glow-top" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-accent/5 blur-[128px]" />
-      <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-accent-purple/5 blur-[128px]" />
+      <div className="absolute top-1/3 right-1/4 w-96 h-96 rounded-full bg-accent-cyan/5 blur-[128px]" />
 
       <div className="relative mx-auto max-w-6xl px-6">
         {/* Badge */}
@@ -356,7 +356,7 @@ export default function Hero() {
               </div>
               <button
                 type="submit"
-                className="btn-glow shrink-0 rounded-full bg-gradient-to-r from-accent to-accent-purple px-6 py-3 text-sm font-medium text-white transition-all hover:brightness-110 w-full sm:w-auto"
+                className="btn-glow shrink-0 rounded-full bg-gradient-to-r from-accent to-accent-cyan px-6 py-3 text-sm font-medium text-background transition-all hover:brightness-110 w-full sm:w-auto"
               >
                 Join Waitlist
               </button>

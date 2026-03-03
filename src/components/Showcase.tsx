@@ -156,7 +156,7 @@ function ChatMockUI() {
 export default function Showcase() {
   return (
     <section id="showcase" className="relative py-24 md:py-32 overflow-hidden">
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-accent-purple/5 blur-[160px]" />
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-accent-cyan/5 blur-[160px]" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-accent/5 blur-[128px]" />
 
       <div className="relative mx-auto max-w-6xl px-6">
@@ -187,7 +187,7 @@ export default function Showcase() {
           className="relative"
         >
           {/* Glow behind */}
-          <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-accent-purple/15 via-accent/15 to-accent-cyan/10 blur-3xl opacity-50" />
+          <div className="absolute -inset-4 rounded-2xl bg-gradient-to-r from-accent/15 via-accent-cyan/15 to-accent-cyan/10 blur-3xl opacity-50" />
           <div className="relative">
             <ChatMockUI />
           </div>

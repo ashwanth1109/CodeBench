@@ -33,7 +33,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5">
           <div className="relative w-8 h-8">
-            <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-accent to-accent-purple" />
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-accent to-accent-cyan" />
             <div className="absolute inset-[2px] rounded-[6px] bg-background flex items-center justify-center">
               <svg
                 width="14"
@@ -82,7 +82,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="#waitlist"
-          className="btn-glow relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-purple px-5 py-2 text-sm font-medium text-white transition-all hover:brightness-110"
+          className="btn-glow relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-cyan px-5 py-2 text-sm font-medium text-background transition-all hover:brightness-110"
         >
           Join Waitlist
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">

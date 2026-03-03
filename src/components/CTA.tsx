@@ -19,7 +19,7 @@ export default function CTA() {
       {/* Background glow */}
       <div className="absolute inset-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full bg-accent/8 blur-[160px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] rounded-full bg-accent-purple/6 blur-[128px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] rounded-full bg-accent-cyan/6 blur-[128px]" />
       </div>
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">
@@ -77,7 +77,7 @@ export default function CTA() {
               />
               <button
                 type="submit"
-                className="btn-glow shrink-0 rounded-full bg-gradient-to-r from-accent to-accent-purple px-8 py-3.5 text-sm font-medium text-white transition-all hover:brightness-110 w-full sm:w-auto"
+                className="btn-glow shrink-0 rounded-full bg-gradient-to-r from-accent to-accent-cyan px-8 py-3.5 text-sm font-medium text-background transition-all hover:brightness-110 w-full sm:w-auto"
               >
                 Get Early Access
               </button>

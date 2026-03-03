@@ -6,7 +6,7 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2.5">
             <div className="relative w-7 h-7">
-              <div className="absolute inset-0 rounded-md bg-gradient-to-br from-accent to-accent-purple" />
+              <div className="absolute inset-0 rounded-md bg-gradient-to-br from-accent to-accent-cyan" />
               <div className="absolute inset-[1.5px] rounded-[4.5px] bg-background flex items-center justify-center">
                 <svg
                   width="12"

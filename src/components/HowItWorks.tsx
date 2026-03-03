@@ -134,7 +134,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.5 }}
           className="text-center mb-20"
         >
-          <p className="text-sm font-medium text-accent-purple mb-3 tracking-wide uppercase">
+          <p className="text-sm font-medium text-accent-cyan mb-3 tracking-wide uppercase">
             How It Works
           </p>
           <h2 className="text-3xl md:text-5xl font-bold text-text-primary tracking-tight">
@@ -179,7 +179,7 @@ export default function HowItWorks() {
               {/* Visual */}
               <div className="flex-1 w-full max-w-lg">
                 <div className="relative">
-                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-accent/10 via-accent-purple/10 to-accent-cyan/5 blur-xl opacity-50" />
+                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-accent/10 via-accent-cyan/10 to-accent-cyan/5 blur-xl opacity-50" />
                   <div className="relative rounded-xl border border-border overflow-hidden bg-surface">
                     {step.visual}
                   </div>
