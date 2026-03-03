@@ -80,7 +80,7 @@ export default function CTA() {
           transition={{ delay: 0.4 }}
           className="mt-4 text-xs text-text-tertiary"
         >
-          Free and open source. macOS only for now.
+          Free during alpha and beta. macOS only for now.
         </motion.p>
       </div>
     </section>
