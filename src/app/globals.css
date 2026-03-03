@@ -13,8 +13,9 @@
   --color-text-primary: #c0caf5;
   --color-text-secondary: #a9b1d6;
   --color-text-tertiary: #565f89;
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+  --font-heading: var(--font-space-grotesk);
 }
 
 * {
@@ -27,6 +28,10 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading), system-ui, sans-serif;
 }
 
 /* Grid background */
@@ -135,7 +140,7 @@ body {
 .mock-terminal {
   background: #13131a;
   border: 1px solid rgba(192, 202, 245, 0.06);
-  font-family: var(--font-mono), "SF Mono", "Fira Code", monospace;
+  font-family: var(--font-mono), "JetBrains Mono", "SF Mono", monospace;
   font-size: 11px;
   line-height: 1.6;
 }

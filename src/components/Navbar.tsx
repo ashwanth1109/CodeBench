@@ -61,7 +61,7 @@ export default function Navbar() {
               </svg>
             </div>
           </div>
-          <span className="text-lg font-semibold text-text-primary tracking-tight">
+          <span className="text-lg font-semibold text-text-primary tracking-tight font-heading">
             CodeBench
           </span>
         </a>

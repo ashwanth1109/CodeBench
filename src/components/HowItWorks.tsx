@@ -163,7 +163,7 @@ export default function HowItWorks() {
               {/* Text */}
               <div className="flex-1 max-w-lg">
                 <div className="inline-flex items-center gap-3 mb-4">
-                  <span className="text-4xl font-bold gradient-text">
+                  <span className="text-4xl font-bold gradient-text font-heading">
                     {step.number}
                   </span>
                   <div className="h-px w-12 bg-gradient-to-r from-accent to-transparent" />

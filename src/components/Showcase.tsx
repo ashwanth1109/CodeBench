@@ -208,7 +208,7 @@ export default function Showcase() {
             { value: "1-click", label: "Repo to PR pipeline" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text">
+              <div className="text-3xl md:text-4xl font-bold gradient-text font-heading">
                 {stat.value}
               </div>
               <div className="mt-1 text-sm text-text-secondary">

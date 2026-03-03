@@ -30,7 +30,7 @@ export default function Footer() {
                 </svg>
               </div>
             </div>
-            <span className="text-sm font-semibold text-text-primary tracking-tight">
+            <span className="text-sm font-semibold text-text-primary tracking-tight font-heading">
               CodeBench
             </span>
           </div>
