@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const DOWNLOAD_URL =
-  "https://github.com/ashwanth1109/CodeBench/releases/latest";
+  "https://github.com/ashwanth1109/CodeBench/releases/latest/download/CodeBench.dmg";
 
 export default function CTA() {
   return (

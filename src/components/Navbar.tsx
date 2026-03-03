@@ -81,7 +81,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href="https://github.com/ashwanth1109/CodeBench/releases/latest"
+          href="https://github.com/ashwanth1109/CodeBench/releases/latest/download/CodeBench.dmg"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-glow relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-cyan px-5 py-2 text-sm font-medium text-background transition-all hover:brightness-110"
