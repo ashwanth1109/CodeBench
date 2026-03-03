@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #1a1b26;
-  --color-foreground: #c0caf5;
-  --color-surface: #16161e;
-  --color-surface-light: #13131a;
-  --color-accent: #f7768e;
-  --color-accent-purple: #bb9af7;
-  --color-accent-cyan: #ff9e64;
-  --color-border: rgba(192, 202, 245, 0.08);
-  --color-border-hover: rgba(192, 202, 245, 0.12);
-  --color-text-primary: #c0caf5;
-  --color-text-secondary: #a9b1d6;
-  --color-text-tertiary: #565f89;
+  --color-background: #1e1e2e;
+  --color-foreground: #cdd6f4;
+  --color-surface: #181825;
+  --color-surface-light: #11111b;
+  --color-accent: #cba6f7;
+  --color-accent-purple: #f5c2e7;
+  --color-accent-cyan: #89b4fa;
+  --color-border: rgba(205, 214, 244, 0.08);
+  --color-border-hover: rgba(205, 214, 244, 0.12);
+  --color-text-primary: #cdd6f4;
+  --color-text-secondary: #bac2de;
+  --color-text-tertiary: #6c7086;
   --font-sans: var(--font-inter);
   --font-mono: var(--font-jetbrains-mono);
   --font-heading: var(--font-space-grotesk);
@@ -20,7 +20,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(192, 202, 245, 0.1) transparent;
+  scrollbar-color: rgba(205, 214, 244, 0.1) transparent;
 }
 
 body {
@@ -37,35 +37,35 @@ h1, h2, h3 {
 /* Grid background */
 .bg-grid {
   background-image:
-    linear-gradient(rgba(192, 202, 245, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(192, 202, 245, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(205, 214, 244, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(205, 214, 244, 0.03) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
 /* Radial glow */
 .glow-top {
-  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(247, 118, 142, 0.12), transparent);
+  background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(203, 166, 247, 0.12), transparent);
 }
 
 .glow-center {
-  background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(255, 158, 100, 0.08), transparent);
+  background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(137, 180, 250, 0.08), transparent);
 }
 
 /* Glass card */
 .glass {
-  background: rgba(192, 202, 245, 0.03);
+  background: rgba(205, 214, 244, 0.03);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(192, 202, 245, 0.06);
+  border: 1px solid rgba(205, 214, 244, 0.06);
 }
 
 .glass-hover:hover {
-  background: rgba(192, 202, 245, 0.05);
-  border-color: rgba(192, 202, 245, 0.1);
+  background: rgba(205, 214, 244, 0.05);
+  border-color: rgba(205, 214, 244, 0.1);
 }
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #f7768e, #ff9e64);
+  background: linear-gradient(135deg, #cba6f7, #89b4fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -81,7 +81,7 @@ h1, h2, h3 {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(247, 118, 142, 0.4), rgba(255, 158, 100, 0.3));
+  background: linear-gradient(135deg, rgba(203, 166, 247, 0.4), rgba(137, 180, 250, 0.3));
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   pointer-events: none;
@@ -97,7 +97,7 @@ h1, h2, h3 {
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: linear-gradient(135deg, #f7768e, #ff9e64);
+  background: linear-gradient(135deg, #cba6f7, #89b4fa);
   opacity: 0;
   z-index: -1;
   filter: blur(12px);
@@ -138,31 +138,31 @@ h1, h2, h3 {
 
 /* Session card mock styles */
 .mock-terminal {
-  background: #13131a;
-  border: 1px solid rgba(192, 202, 245, 0.06);
+  background: #11111b;
+  border: 1px solid rgba(205, 214, 244, 0.06);
   font-family: var(--font-mono), "JetBrains Mono", "SF Mono", monospace;
   font-size: 11px;
   line-height: 1.6;
 }
 
 .mock-terminal .prompt {
-  color: #f7768e;
+  color: #cba6f7;
 }
 
 .mock-terminal .command {
-  color: #c0caf5;
+  color: #cdd6f4;
 }
 
 .mock-terminal .output {
-  color: #565f89;
+  color: #6c7086;
 }
 
 .mock-terminal .success {
-  color: #9ece6a;
+  color: #a6e3a1;
 }
 
 .mock-terminal .accent {
-  color: #bb9af7;
+  color: #f5c2e7;
 }
 
 /* Typing cursor animation */
@@ -181,6 +181,6 @@ html {
 
 /* Selection */
 ::selection {
-  background: rgba(247, 118, 142, 0.3);
+  background: rgba(203, 166, 247, 0.3);
   color: #fff;
 }

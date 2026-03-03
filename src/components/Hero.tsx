@@ -180,7 +180,7 @@ function MockCanvasUI() {
                 y1="25%"
                 x2="70%"
                 y2="25%"
-                stroke="rgba(247,118,142,0.15)"
+                stroke="rgba(203,166,247,0.15)"
                 strokeWidth="1"
                 strokeDasharray="4 4"
               />
@@ -189,7 +189,7 @@ function MockCanvasUI() {
                 y1="25%"
                 x2="25%"
                 y2="70%"
-                stroke="rgba(255,158,100,0.15)"
+                stroke="rgba(137,180,250,0.15)"
                 strokeWidth="1"
                 strokeDasharray="4 4"
               />
@@ -198,7 +198,7 @@ function MockCanvasUI() {
                 y1="25%"
                 x2="75%"
                 y2="70%"
-                stroke="rgba(247,118,142,0.10)"
+                stroke="rgba(203,166,247,0.10)"
                 strokeWidth="1"
                 strokeDasharray="4 4"
               />
