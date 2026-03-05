@@ -102,10 +102,11 @@ export default function Hero() {
 
         {/* Early Access Sign-up */}
         <motion.div
+          id="early-access"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 flex flex-col items-center gap-4"
+          className="mt-16 flex flex-col items-center gap-4 scroll-mt-24"
         >
           {status === "success" ? (
             <div className="glass rounded-xl p-8 text-center max-w-lg">
