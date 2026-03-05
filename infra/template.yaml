@@ -1,0 +1,72 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: CodeBench Early Access Signup API
+
+Parameters:
+  NotificationEmail:
+    Type: String
+    Description: Email address to receive signup notifications (must be verified in SES)
+
+Globals:
+  Function:
+    Runtime: nodejs20.x
+    Timeout: 10
+
+Resources:
+  SignupApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: prod
+      CorsConfiguration:
+        AllowOrigins:
+          - "https://codebench.ai"
+          - "https://www.codebench.ai"
+          - "http://localhost:3000"
+        AllowMethods:
+          - POST
+          - OPTIONS
+        AllowHeaders:
+          - Content-Type
+
+  SignupFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: codebench-signup
+      Handler: index.handler
+      CodeUri: signup/
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref SignupTable
+          NOTIFICATION_EMAIL: !Ref NotificationEmail
+      Events:
+        Signup:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref SignupApi
+            Path: /signup
+            Method: POST
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref SignupTable
+        - Statement:
+            - Effect: Allow
+              Action:
+                - ses:SendEmail
+              Resource: "*"
+
+  SignupTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: codebench-signups
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - AttributeName: email
+          AttributeType: S
+      KeySchema:
+        - AttributeName: email
+          KeyType: HASH
+
+Outputs:
+  ApiUrl:
+    Description: Signup API endpoint
+    Value: !Sub "https://${SignupApi}.execute-api.${AWS::Region}.amazonaws.com/prod/signup"

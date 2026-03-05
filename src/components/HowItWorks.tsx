@@ -1,124 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
+import LightboxImage from "./LightboxImage";
 
 const steps = [
   {
     number: "01",
-    title: "Configure your repos",
+    title: "Chat with your codebase",
     description:
-      "Point CodeBench at your repositories. Set up guardrails, service configs, and environment variables once — they persist across sessions.",
-    visual: (
-      <div className="mock-terminal rounded-lg p-4 h-full">
-        <div className="flex items-center gap-2 mb-3 text-text-tertiary text-[10px]">
-          <div className="w-2 h-2 rounded-full bg-green-400/50" />
-          config.json
-        </div>
-        <pre className="text-[11px] leading-relaxed">
-          <span className="text-accent-purple">{"{"}</span>
-          {"\n"}
-          {"  "}<span className="text-accent">&quot;repos&quot;</span>: [
-          {"\n"}
-          {"    "}&#123; <span className="text-accent">&quot;name&quot;</span>: <span className="text-green-400">&quot;acme/backend&quot;</span>,{"\n"}
-          {"      "}<span className="text-accent">&quot;path&quot;</span>: <span className="text-green-400">&quot;~/code/backend&quot;</span> &#125;,{"\n"}
-          {"    "}&#123; <span className="text-accent">&quot;name&quot;</span>: <span className="text-green-400">&quot;acme/frontend&quot;</span>,{"\n"}
-          {"      "}<span className="text-accent">&quot;path&quot;</span>: <span className="text-green-400">&quot;~/code/frontend&quot;</span> &#125;{"\n"}
-          {"  "}],{"\n"}
-          {"  "}<span className="text-accent">&quot;guardrails&quot;</span>: <span className="text-green-400">&quot;...&quot;</span>{"\n"}
-          <span className="text-accent-purple">{"}"}</span>
-        </pre>
-      </div>
-    ),
+      "Spin up an AI coding session on any repo. Describe what you want — the AI reads, edits, and tests code in real-time while you watch every tool call streamed to your workbench.",
+    image: "/images/chat-view.jpg",
+    alt: "CodeBench chat view — AI coding conversation with real-time tool calls",
   },
   {
     number: "02",
-    title: "Spin up sessions",
+    title: "Launch & test your services",
     description:
-      "Launch isolated AI coding sessions with one click. Each session gets its own worktree, context, and development environment. Run as many as you need in parallel.",
-    visual: (
-      <div className="mock-terminal rounded-lg p-4 h-full">
-        <div className="space-y-2">
-          <div>
-            <span className="prompt">$ </span>
-            <span className="command">codebench session new --repo acme/backend</span>
-          </div>
-          <div className="output">
-            <span className="success">✓</span> Created worktree task/auth-refactor
-          </div>
-          <div className="output">
-            <span className="success">✓</span> Provisioned Claude session (Opus)
-          </div>
-          <div className="output">
-            <span className="success">✓</span> Context loaded (42 files indexed)
-          </div>
-          <div className="mt-3">
-            <span className="prompt">$ </span>
-            <span className="command">codebench session new --repo acme/backend</span>
-          </div>
-          <div className="output">
-            <span className="success">✓</span> Created worktree task/api-endpoints
-          </div>
-          <div className="output">
-            <span className="success">✓</span> Provisioned Claude session (Sonnet)
-          </div>
-          <div className="mt-3">
-            <span className="prompt">$ </span>
-            <span className="accent">4 sessions active</span>
-            <span className="cursor-blink ml-1">▊</span>
-          </div>
-        </div>
-      </div>
-    ),
+      "Start your frontend and backend services directly from CodeBench to test AI-generated changes live. See your app running alongside the coding session — no terminal juggling required.",
+    image: "/images/launch-view.jpg",
+    alt: "CodeBench launch view — session launcher with spatial canvas",
   },
   {
     number: "03",
     title: "Orchestrate & ship",
     description:
       "Monitor progress on the spatial canvas. Review AI-generated code in real-time, create PRs with one click, and track CI status — all from one unified interface.",
-    visual: (
-      <div className="mock-terminal rounded-lg p-4 h-full">
-        <div className="space-y-2.5">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.5)]" />
-              <span className="text-text-primary text-xs font-mono">auth-refactor</span>
-            </div>
-            <span className="text-[10px] text-green-400">PR #47 — CI passing</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.5)]" />
-              <span className="text-text-primary text-xs font-mono">api-endpoints</span>
-            </div>
-            <span className="text-[10px] text-yellow-400">PR #48 — reviewing</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_6px_rgba(96,165,250,0.5)]" />
-              <span className="text-text-primary text-xs font-mono">ui-dashboard</span>
-            </div>
-            <span className="text-[10px] text-accent">writing code...</span>
-          </div>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-400 shadow-[0_0_6px_rgba(74,222,128,0.5)]" />
-              <span className="text-text-primary text-xs font-mono">test-coverage</span>
-            </div>
-            <span className="text-[10px] text-green-400">✓ 94% coverage</span>
-          </div>
-          <div className="border-t border-border mt-3 pt-3">
-            <div className="flex items-center justify-between text-[10px]">
-              <span className="text-text-tertiary">Session cost</span>
-              <span className="text-text-secondary">$4.84</span>
-            </div>
-            <div className="flex items-center justify-between text-[10px] mt-1">
-              <span className="text-text-tertiary">PRs shipped today</span>
-              <span className="text-green-400 font-semibold">3 merged</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    ),
+    image: "/images/github-prs.jpg",
+    alt: "CodeBench GitHub PR management — create and track pull requests",
   },
 ];
 
@@ -181,7 +89,11 @@ export default function HowItWorks() {
                 <div className="relative">
                   <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-accent/10 via-accent-cyan/10 to-accent-cyan/5 blur-xl opacity-50" />
                   <div className="relative rounded-xl border border-border overflow-hidden bg-surface">
-                    {step.visual}
+                    <LightboxImage
+                      src={step.image}
+                      alt={step.alt}
+                      className="w-full h-auto"
+                    />
                   </div>
                 </div>
               </div>

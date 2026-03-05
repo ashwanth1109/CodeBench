@@ -63,7 +63,7 @@ const features = [
     ),
     title: "Multi-Session Orchestration",
     description:
-      "Run parallel AI coding sessions across different repositories. Each session gets its own isolated environment with dedicated context.",
+      "Run parallel AI coding sessions across different repositories. Powered by git worktrees, each session gets its own isolated branch and environment.",
     gradient: "from-purple-500 to-pink-500",
   },
   {
